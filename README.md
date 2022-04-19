@@ -10,20 +10,22 @@ Download [300-dim 830B GloVe embeddings](https://github.com/stanfordnlp/GloVe).
 * Tried models with lesser size embeddings but does not perform better than above given embedding. However, larger size embeddings to give better performance but is computational expensive too! 
 * To run the model, run GraphFlow.ipynb in colab or follow below steps
 
-Install prerequisites
+Install prerequisites<br>
 	```
-	pip install torch==0.4.1.post2 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install torch==0.4.1.post2 -f https://download.pytorch.org/whl/torch_stable.html 
+	```
+	<br>
+	```
 	pip install -r requirements.txt
-	pip install pycorenlp
-	pip install pytorch-pretrained-bert
-
-		```
-		Make changes in config/graphflow_dynamic_graph_coqa.yml to pass model parameters.
-
+	```
+	<br><br>
+Make changes in config/graphflow_dynamic_graph_coqa.yml to pass model parameters.<br><br>
+Run below command to train the model <br>
 	```
 	python main.py -config config/graphflow_dynamic_graph_coqa.yml
 	```
-Logs will be saved in data/
+	<br>
+Logs(Metrics-F1 score and EM) will be saved in data/
 
 
 ## Reference
