@@ -79,7 +79,7 @@ class GraphLearner(nn.Module):
         attention = torch.mean(torch.matmul(context_fc, context.unsqueeze(2).transpose(-1, -2)), dim=2)
 
 
-        # # 4）weighted cosine
+        # # 4ï¼‰weighted cosine
         # context_fc = context.unsqueeze(2) * self.weight_tensor.unsqueeze(0).unsqueeze(0).unsqueeze(-2)
         # context_norm = F.normalize(context_fc, p=2, dim=-1)
         # attention = torch.matmul(context_norm, context_norm.transpose(-1, -2)).mean(2)

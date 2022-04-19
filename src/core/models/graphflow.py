@@ -74,7 +74,7 @@ class GraphFlow(nn.Module):
                 self.ques_num_marker_embed = nn.Embedding(config['max_turn_num'], ques_turn_marker_embed_dim)
 
         if self.use_bert and self.use_bert_weight:
-            bert_layer_start, bert_layer_end = config['bert_layer_indexes'].split(',')
+            bert_layer_start, bert_layer_end = config['bert_layer_indexes'][0], config['bert_layer_indexes'][1]#.split(',')
             num_bert_layers = int(bert_layer_end) - int(bert_layer_start)
             self.logits_bert_layers = nn.Parameter(nn.init.xavier_uniform_(torch.Tensor(1, num_bert_layers)))
             if config['use_bert_gamma']:

@@ -1,10 +1,10 @@
 # Data
 dataset_name: 'coqa'
-trainset: '../data/coqa/train.json'
-devset: '../data/coqa/dev.json'
+trainset: 'data/coqa/train.json'
+devset: 'data/coqa/dev.json'
 testset: null
-embed_file: '../data/coqa/glove.840B.300d.txt'
-saved_vocab_file: '../data/coqa/word_model_min_5'
+embed_file: 'data/coqa/glove.840B.300d.txt'
+saved_vocab_file: 'data/coqa/word_model_min_5'
 pretrained: null
 
 
@@ -46,7 +46,7 @@ rnn_input_dropout: null
 
 # Graph neural networks
 use_gnn: True
-bignn: False
+bignn: True
 static_graph: False
 temporal_gnn: True
 ctx_graph_hops: 5
